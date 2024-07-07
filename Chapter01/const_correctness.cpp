@@ -10,11 +10,18 @@
 
 class Person {
 public:
+  Person() = default;
+  Person(int age) : age_{age} {}
   auto age() const {
     return age_;
   }
   auto set_age(int age) {
     age_ = age;
+  }
+
+  // to string funcv
+  auto to_string() const {
+    return std::to_string(age_);
   }
 
 private:
